@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
+}
+html {
+  scroll-behavior: smooth;
+}
+.max-width {
+  /*max-width: 1300px;*/
+  margin: auto;
+  padding: 0 35px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  /*background-color: crimson;*/
+  padding: 20px;
+  /*border:1px solid green;*/
+  z-index: 99999999;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.sticky {
+  background-color: crimson;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar .menu li a {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .menu li a:hover {
+  color: #fff;
+  font-weight: 700;
+}
+
+.navbar .max-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*home styling*/
+.home {
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(home.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  min-height: 500px;
+  color: #fff;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.home .home-content .text2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.home .home-content .text3 {
+  font-size: 55px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.home .home-content .text3 span {
+  color: crimson;
+}
+
+/*menu-styling*/
+
+.menu-btn {
+  color: #fff;
+  display: none;
+  font-size: 40px;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 30px;
+  height: 45px;
+  width: 42px;
+  line-height: 45px;
+  bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+  background-color: crimson;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll-up.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*about-styling*/
+
+.about {
+  margin: 100px 0;
+}
+
+.about .title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.about .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #111;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 3px;
+}
+
+.about .title::after {
+  content: "who i am";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  padding: 5px;
+  background-color: #fff;
+  color: crimson;
+  transform: translateX(-50%);
+}
+
+.about .about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 30px 0 0 45px;
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+  color: crimson;
+}
+
+.about .about-content .right p {
+  text-align: justify;
+}
+
+/*service styling*/
+
+.services {
+  /*margin:100px 0;*/
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.services .title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.services .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  background-color: #fff;
+  transform: translateX(-50%);
+  width: 230px;
+  height: 3px;
+}
+
+.services .title::after {
+  content: "what i provide";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  padding: 5px;
+  background-color: #111;
+  color: crimson;
+  transform: translateX(-50%);
+}
+
+.services .services-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.services .services-content .card {
+  width: calc(33% - 20px);
+  text-align: center;
+  background-color: #222;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.services .services-content .card:hover {
+  background-color: crimson;
+}
+
+.services .services-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .services-content .card .box:hover {
+  transform: scale(1.05);
+}
+
+.services .services-content .card i {
+  font-size: 50px;
+  color: crimson;
+}
+
+.services .services-content .card :hover i {
+  color: #fff;
+}
+
+.services .services-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+/* skills stylying */
+
+.skills {
+  /*margin:100px 0;*/
+  margin-top: 30px;
+  padding: 40px 0;
+}
+
+.skills .title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.skills .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  background-color: #000;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 3px;
+}
+
+.skills .title::after {
+  content: "what i know";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  padding: 5px;
+  background-color: #fff;
+  color: crimson;
+  transform: translateX(-50%);
+}
+.skills .skills-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skills .skills-content .column {
+  /* border: 1px solid red; */
+  width: calc(50% - 30px);
+  /* border: 1px solid red; */
+  padding: 50px 12px;
+}
+
+.skills .skills-content .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+  text-align: justify;
+}
+
+.skills .skills-content .right .bars {
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .right .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills .skills-content .right span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.skills .skills-content .right .bars .line {
+  height: 3px;
+
+  background-color: lightgrey;
+  position: relative;
+}
+
+.skills .skills-content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: crimson;
+}
+
+.skills-content .right .html::before {
+  width: 90%;
+}
+
+.skills-content .right .css::before {
+  width: 60%;
+}
+.skills .skills-content .right .js::before {
+  width: 75%;
+}
+
+.skills .skills-content .right .php::before {
+  width: 50%;
+}
+.skills .skills-content .right .mysql::before {
+  width: 50%;
+}
+
+/* contact styling */
+
+.contact {
+  /*margin:100px 0;*/
+  margin-top: 30px;
+  padding: 40px 0;
+}
+
+.contact .title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.contact .title:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  background-color: #000;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 3px;
+}
+
+.contact .title::after {
+  content: "get in touch";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  padding: 5px;
+  background-color: #fff;
+  color: crimson;
+  transform: translateX(-50%);
+}
+
+.contact .contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+  text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+  margin: 20px 0;
+}
+.contact .contact-content .left .row {
+  display: flex;
+  height: 65px;
+}
+.contact .contact-content .left .row .info {
+  margin-left: 30px;
+}
+
+.contact .contact-content .left .row i {
+  font-size: 25px;
+  color: crimson;
+}
+
+.contact .contact-content .info .head {
+  font-weight: 700;
+}
+
+.contact .contact-content .info .sub-title {
+  color: #333;
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.contact .right form .field input:hover {
+  border: 1px solid crimson;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 6px;
+}
+.contact .right form .textarea textarea:hover {
+  border: 1px solid crimson;
+}
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form .button {
+  height: 47px;
+  width: 170px;
+  margin-top: 20px;
+}
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: crimson;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.contact .right form .button button:hover {
+  background: none;
+  color: crimson;
+  border: 1px solid crimson;
+}
+
+/* footer styling */
+
+footer {
+  background-color: #111;
+  padding: 20px 23px;
+  color: #fff;
+  text-align: center;
+}
+footer span a {
+  color: crimson;
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: underline;
+}
+/*responsive media query starts*/
+
+@media (max-width: 1300px) {
+  .about .about-content .left img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 981px) {
+  .max-width {
+    padding: 0 50px;
+    /*border:1px solid red;*/
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar .menu-btn i.active::before {
+    content: "\f00d";
+  }
+
+  .navbar .menu {
+    position: fixed;
+    background-color: #111;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    text-align: center;
+    padding-top: 150px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .navbar .menu li a {
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar .menu li a:hover {
+    color: crimson;
+    letter-spacing: 4px;
+  }
+
+  .home .home-content {
+    margin: -25px;
+    /*border:1px solid red;*/
+  }
+
+  .home .home-content .text1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .home .home-content .text2 {
+    font-size: 45px;
+    margin: 40px 0;
+  }
+
+  .home .home-content .text3 {
+    font-size: 70px;
+    margin-bottom: 15px;
+  }
+
+  .about .max-width {
+    max-width: 800px;
+  }
+
+  .about .about-content .column {
+    width: 100%;
+  }
+
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .right {
+    flex: 100%;
+  }
+
+  .services .services-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 690px) {
+  .home .home-content .text1 {
+    /* border: 1px solid red; */
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .home .home-content .text2 {
+    /* border: 1px solid red; */
+    font-size: 29px;
+    letter-spacing: 2px;
+  }
+  .home .home-content .text3 {
+    /* border: 1px solid red; */
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  .services .services-content .card,
+  .skills .skills-content .column,
+  .contact .contact-content .column {
+    width: 100%;
+  }
+}
